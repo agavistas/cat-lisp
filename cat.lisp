@@ -7,7 +7,7 @@
 	    (incf sum (* a b)))
 	  (cat (cons sum x) (+ y 1) z)))))
 
-(defun cat_multi (x y z)
+(defun cat-multi (x y z)
   (let ((sum 0) (ax (reverse x)))
     (if (= y (+ z 1)) (progn (format t "~%~a~%~%~a~%" x (car x)) (exit)))
     (format t "~a~%" (/ y z))
@@ -36,7 +36,7 @@
   (if (= k 0) acc
       (binom (- n 1) (- k 1) (* acc (/ n k)))))
 
-(defun cat_binom (n)
+(defun cat-binom (n)
   (/ (binom (* 2 n) n 1) (+ n 1)))
 
 (defun main()
